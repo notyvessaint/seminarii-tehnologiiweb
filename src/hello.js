@@ -1,8 +1,5 @@
-var http = require('http');
+let sayHello = (name) => `Hello, ${name}!`;
+console.log(sayHello(process.argv[2]));
 
-http
-    .createServer(function (req, res) {
-        res.write('Hello Web!')
-        res.end();
-    })
-    .listen(8080);
+let exercitiu = (arr) => arr.join('');
+console.log(exercitiu(['Hello', ' ', 'Web', '!']));

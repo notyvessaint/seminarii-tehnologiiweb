@@ -52,7 +52,7 @@ function intercaleazaArrayuri(array1, array2) {
             rezultat.push(array1[i], array2[i]);
 
         return rezultat;
-    }
+    } else return -1;
 }
 
 console.log(intercaleazaArrayuri([1, 2, 3], ['a', 'b', 'c']).join(', '));

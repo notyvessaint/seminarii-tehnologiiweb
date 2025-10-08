@@ -1,0 +1,23 @@
+{
+  "name": "seminarii-tehnologiiweb",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/notyvessaint/seminarii-tehnologiiweb#readme",
+  "bugs": {
+    "url": "https://github.com/notyvessaint/seminarii-tehnologiiweb/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notyvessaint/seminarii-tehnologiiweb.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

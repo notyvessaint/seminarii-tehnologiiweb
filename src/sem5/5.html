@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <script>
+        window.onload = () => {
+            const form = document.getElementById('formAddContact')
+            const tableBody = document.getElementById('tableBody')
+
+            const onFormSubmit = (e) => {
+                e.preventDefault()
+
+                const name = document.getElementById('name').value
+                const phone = document.getElementById('phone').value
+
+                if(!name || !phone)
+                    return alert("Completeaza campurile")
+
+                const row = document.createElement('tr')
+                const nameCell = document.createElement('td')
+                const phoneCell = document.createElement('td')
+
+                nameCell.textContent = name
+                phoneCell.textContent = phone
+
+                row.appendChild(nameCell)
+                row.appendChild(phoneCell)
+                tableBody.appendChild(row)
+
+                form.Reset()
+            }
+
+            form.onsubmit = onFormSubmit
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Agenda telefonica</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nume</th>
+                <th>Telefon</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <h2>Adauga contact</h2>
+
+    <form id="formAddContact">
+        <input type="text" id="name">
+        <input type="text" id="phone">
+        <button type="submit">Adauga</button>
+    </form>
+</body>
+
+</html>

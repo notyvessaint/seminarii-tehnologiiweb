@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <script>
+        window.onload = () => {
+            const button = document.getElementById('myBtn')
+            const newEvent = new Event('newEvent')
+            const myEvt = new Event('myEvt')
+
+            const myEvtHandler = () => {
+                console.log('The button was clicked.')
+
+                button.dispatchEvent(newEvent)
+            }
+
+            const clickEventHandler = () => {
+                document.dispatchEvent(myEvt)
+            }
+
+            const onNewEventHandler = () => {
+                console.log('I got triggered')
+            }
+
+            button.onclick = clickEventHandler
+            button.addEventListener("click", clickEventHandler)
+            document.addEventListener("myEvt", myEvtHandler)
+            button.addEventListener("newEvent", onNewEventHandler)
+        }
+    </script>
+</head>
+
+<body>
+    <button id="myBtn">Click me!</button>
+</body>
+
+</html>
